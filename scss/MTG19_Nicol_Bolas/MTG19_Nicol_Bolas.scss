@@ -1,0 +1,344 @@
+$card-border-color: #181411;
+$border-color: #EACE3C;
+$header-background-color: #DCBF79;
+$text-area-textur-color: #F2EAD7;
+$background-texture: linear-gradient( to left,
+                                    rgba(0, 0, 0, .1),
+                                     rgba(0, 0, 0, .0),
+                                     rgba(0, 0, 0, .1)),
+    url(../../img/MTG19_Nicol_Bolas/title_texture.png);
+
+.clearfix::before, clearfix::after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // color: transparent;
+}
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+    width: 500px;
+    height: 696px;
+    margin: 0 auto;
+    margin-top: 56px;
+    border-radius: 25px;
+    box-shadow: -8px 9px 16px -3px #000;
+    background-color:  $card-border-color; 
+    &-background {
+        background-image: url("../../img/MTG19_Nicol_Bolas/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 90%;
+        margin: 10px;
+    }
+    &-frame {
+        z-index: 1;
+        position: relative;
+        height: 110%;
+        max-width: 96%;
+        left: 2%;
+        top: 0.5%;
+        right: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &-text-area {
+            position: relative;
+            top: -5px;
+            margin: 0 auto;
+            width: 94%;
+            font-size: 24px;
+            height: 34%;
+            border: 2px solid $border-color;
+            background-image: url("../../img/MTG19_Nicol_Bolas/texture.png");
+            background-repeat: repeat-y;
+            box-shadow: -5px 0 5px rgba(0, 0, 0, 1),
+                        inset -3px 3px 3px rgba(0, 0, 0, .5);
+        }
+        &-description {
+            margin: 2% 0 0 2%;
+            font-family: "Times New Roman", serif;
+            font-size: 22px;            
+            & > .ms {
+                font-size: 16px;
+            }
+        }
+        &-hp-container {
+            display: flex;
+            justify-content: flex-end;
+            z-index: 1;
+            width: 102%;
+        }
+    }
+    &-artwork {
+        position: relative;
+        top: -5px;
+        z-index: 4;
+        text-align: center;
+        margin: 0 auto;
+        width: 93%;
+        max-height: 55%;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    &-info {
+        font-family : Arial, Helvetica, sans-serif;
+        font-weight: 900px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #eee;
+        width: 100%;
+        &--left {
+            margin-top: 2.5%;
+            font-size: 10px;
+        }
+        
+        &--center {
+            &__orb {
+                border-radius: 60%;
+                flex-basis: 41px;
+                height: 21px;
+                position: relative;
+                left: 10px;
+                bottom: 11px;
+                z-index: 2;
+                background-image: url("../../img/MTG19_Nicol_Bolas/holo.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                box-shadow: 0 0 0 4px #171314;
+            }
+        }
+        &--right {
+            margin-top: 4.75%;
+            font-size: 10px;
+            &__hp {
+                display: flex;
+                justify-content: center;
+                font-family: "Bekeren Bold";
+                font-size: 20px;
+                border-radius: 26px/40px;
+                border: 3px solid $header-background-color;
+                background-image: linear-gradient(
+                    45deg,
+                    rgba(0, 0, 0, .1),
+                    rgba(0, 0, 0, 0)
+                ), url("../../img/MTG19_Nicol_Bolas/title_texture.png");
+                width: 65px;
+                line-height: 100%;
+                height: 31px;
+                box-shadow: -5px 0 6px rgba(0, 0, 0, .5),
+                            inset 0 0 0 1px rgba(0, 0, 0, .4),
+                            inset -3px 3px 1px rgba(0, 0, 0, .2);
+                z-index: 2;
+                margin-top: -8px;   
+            }
+        }
+    }
+}
+
+.frame-header-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 500px;
+    height: 9%;
+    background-image: url("../../img/MTG19_Nicol_Bolas/top.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 476px 100%;
+}
+.frame-header-wrapper::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 16px;
+    height: 299px;
+    background-color: #D8BB3D;
+    top: 57px;
+    left: 20px;
+    border-top-left-radius: 5px 6px;
+    border-bottom-left-radius: 5px 6px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    box-shadow: inset 6px 0 6px -6px rgba(0, 0, 0, 1),
+                inset 0 6px 6px -6px  rgba(0, 0, 0, 1);
+}
+.frame-header-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 30px;
+    height: 276px;
+    z-index: 6;
+    border-top-right-radius: 16px 20px;
+    border-top: 2px solid $card-border-color;
+    border-right: 1px solid #000;
+    background-image: url("../../img/MTG19_Nicol_Bolas/background.png");
+    background-position:  2px -159px;
+    box-shadow: inset -6px 0 6px -6px #000;
+}
+
+.frame-header {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-title {
+        background-image: $background-texture;
+        font-family: "Beleren Bold";
+        font-size: 13px;
+        width: 420px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #000;
+        border-radius: 26px/40px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        margin-left: -6px;
+        margin-top: 6px;
+        padding-left: 20px;
+        padding-right: 4px;
+        box-shadow: inset -2px 0 2px 0 #D3AC75,
+                    inset 0 2px 2px 0 #F1E3C6,
+                    inset 0 -2px 2px 0 #8B6B35;
+    }
+    &--sub {
+        position: relative;
+        top: -5px;
+        z-index: 1;
+        font-family: "Beleren Bold";
+        font-size: 20px;
+        width: 98%;
+        height: 31px;
+        border-left: 2px solid $border-color;
+        border-top: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+        border-radius: 26px/40px;
+        background-image: $background-texture;
+        padding: 10px 5px 7px 5px;
+        box-shadow: inset -2px 0 2px 0 #D3AC75,
+                    inset 0 2px 2px 0 #F1E3C6,
+                    inset 0 -2px 2px 0 #8B6B35;
+        
+        &__set-icon {
+            display: flex;
+            justify-content: flex-end;
+            background-color: red;
+            width: 53px;
+            height: 25px;
+            font-family: "Beleren Bold";
+            font-size: 23px;
+            border: 1px solid #000;
+            border-radius: 18px/40px;
+            margin: 5px 0;
+            padding: 0 3px;
+            background-image: linear-gradient(
+                117deg,
+                rgba(202,53,42, 1) 0%,
+                rgba(252,151,30, 1) 50%,
+                rgba(202,53,42, 1) 100%
+            );
+            &--letter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 1px;
+                padding-right: 1px;
+                transform: scale(1.3, 1);
+            }
+            &--number {
+                font-size: 16px;
+            }
+        }
+    } 
+}
+
+
+.frame-header::before {
+    content: '';
+    height: 32px;
+    width: 40px;
+    z-index: 2;
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    background-image: url("../../img/MTG19_Nicol_Bolas/top.png");
+    background-position: -40px -40px;
+    border-radius: 20px/40px;
+    border-right: 1px solid #000;
+    border-top: transparent;
+    box-shadow: 6px 0 6px -6px rgba(0, 0, 0, .6);
+}
+
+.icon_front-wrapper{
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    border: 1px solid #928142;
+    border-radius: 50%;
+    top: 3px;
+    left: 6px;
+    height: 38px;
+    width: 38px;
+}
+.icon_front {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-image: url("../../img/MTG19_Nicol_Bolas/front_icon_background.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > img {
+        width: 24px;
+    }
+}
+
+.icon-container {
+    display: flex;
+}
+.ms {
+    font-size: 18px;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.icon_container > .ms {
+    box-shadow: -0.05em 0.12em 0px 0 black;
+}
+
+#mana-cost {
+    padding-right: 2px;
+    background: #c5c0c6;
+}
+#mana-black
+{  
+    background: #c5c0c6;
+    
+}
+#mana-blue {
+    background: #C5E1E7;
+}
+#mana-red {
+    background: #F4A583;
+}
+
+.paintbrush {
+    max-width: 10px;
+}

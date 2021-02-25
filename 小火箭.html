@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小火箭</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            height: 100vh;
+            background: radial-gradient(300px at right top, red, yellow, skyblue);
+            overflow: hidden;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 100vh;  
+        }
+        body:hover > img {
+            transform: translate(100vw, -1050px) rotateZ(45deg) scale(0.3);
+            transition: all 3s;
+        }
+        body:hover > img:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        body:hover > img:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+        body:hover > img:nth-child(4) {
+            transition-delay: 0.6s;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="img/小火箭/1.png" alt="">
+    <img src="img/小火箭/1.png" alt="">
+    <img src="img/小火箭/1.png" alt="">
+    <img src="img/小火箭/1.png" alt="">
+</body>
+</html>

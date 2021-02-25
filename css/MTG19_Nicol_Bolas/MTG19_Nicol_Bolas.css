@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+}
+.ms {
+    border-radius: 50% 50%;
+}
+.ms-4, .ms-1, .ms-b {
+    background-color:#c5c0c6;;
+}
+.ms-u {
+    background-color: #C5E1E7;
+}
+.ms-r {
+    background-color: #F4A583;
+}
+.card {
+    box-sizing: border-box;
+    width: 528px;
+    height: 743px;
+    padding-top: 0;
+    background-color: #08090d;
+    margin: 100px auto 0;
+}
+.head {
+    position: relative;
+    height: 79px;
+    background: url("../../img/MTG19_Nicol_Bolas/head.png") no-repeat center;
+}
+.head > .font-icon-wrapper {
+    float: left;
+    height: 44px;
+    width: 44px;
+    border-radius: 50% 50%;
+    margin: 21px 0 0 19px;
+    border: 1px solid #836b4c;
+    background-color: #fff;
+}
+.head > .font-icon-wrapper > .font-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50% 50%;
+    margin: 2px 0 0 2px;
+    background: url("../../img/MTG19_Nicol_Bolas/front_icon_background.png")  no-repeat center center;
+    background-size: 40px 40px;
+}
+.head > .font-icon-wrapper > .font-icon img {
+    width: 26px;
+    height: 23px;
+    padding-top: 9px;
+    margin: 0 auto;
+}
+.head > .title {
+    position: absolute;
+    top: 22px;
+    left: 60px;
+    width: 446px;
+    height: 45px;
+    border: 1px solid #000;
+    background-color: red;
+}
+.head > .title > h1 {
+    float: left;
+    margin-left: 22px;
+    font-size: 26px;
+    font-family: "Beleren Bold";
+    background-color: green;
+    margin-top: 7px;
+}
+.head > .title > .mana {
+    float: right;
+    margin-top: 7px;
+    background-color: pink;
+    margin-right: 7px;
+}
+.head > .title > .mana i {
+    float: left;
+    font-size: 26px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 3px;
+    box-shadow: -1px 2px 0 1px #000;
+}
+.main {
+    position: relative;
+    z-index: 1;
+    top: -7px;
+    width: 500px;
+    height: 600px;
+    background-color:#e0c344;
+    margin: 0 auto;
+    border-top-left-radius: 8px 8px;
+    border-top-right-radius: 8px 8px;
+}
+.main > img {
+    display: block;
+    width: 460px;
+    height: 340px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.main > .middle-bar-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 3;
+    width: 496px;
+    height: 53px;
+    margin: 0 auto;
+    background-color: green;
+    border-radius: 14px/26px;
+    padding-top: 7px;
+}
+.main .middle-bar {
+    width: 482px;
+    height: 39px;
+     background-color: red;
+    margin: 0 auto;
+    border-radius: 10px/22px;
+
+}
+.main > .description {
+    position: relative;
+    z-index: 4;
+    width: 468px;
+    height: 228px;
+    margin: -7px auto 0;
+    background: orange;
+    border: 7px solid green;
+    border-bottom: 5px solid green;
+}
+.main > .description p {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    margin-left: 7px;
+}
+.main > .description p i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+.info {
+    position: relative;
+    width: 482px;
+    height: 36px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #eee;
+}
+.info > .left {
+    padding-top: 3px;
+    float: left;
+    width: 200px;
+    height: 33px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.info > .left .paintbrush {
+    display: inline-block;
+    max-width: 16px;
+}
+.info > .left span {
+    font-size: 10px;
+}
+.info > .center-wrapper {
+    position: absolute;
+    z-index: 5;
+    width: 72px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: 0 auto;
+    border-radius: 50% 50%;
+    background-color: green;
+}
+.info .center {
+    position: absolute;
+    z-index: 10;
+    width: 62px;
+    height: 34px;
+    left: 0;
+    right: 0;
+    top: -100%;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 50% 50%;
+    background: #08090d url(../../img/MTG19_Nicol_Bolas/holo.png) no-repeat center center;
+    background-size: 48px 23px;
+}
+.info .black {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    width: 72px;
+    height: 20px;
+    background-color:#08090d;
+}
+.info .right {
+    float: right;
+    width: 198px;
+    height: 19px;
+    padding-top: 17px;
+    font-size: 12px;
+}

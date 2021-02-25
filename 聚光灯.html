@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚光灯</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html {
+            background-color: black;
+        }
+        h1 {
+            font-size: 240px;
+            color: #333;
+            position: absolute;
+            text-transform: uppercase;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        h1::after {
+            content: "SPOTLIGHT";
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(to left, #F41A07, #DAF30B, #26F30B, #0BC3F3, #2A0BF3, #2A0BF3, #F30B9B, #F30B3C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            clip-path: circle(140px at 0% 50%);
+            animation: light 5s infinite;
+        }
+        @keyframes light {
+            0% {
+                clip-path: circle(140px at 0% 50%);
+            }
+            50% {
+                clip-path: circle(140px at 100% 50%);
+            }
+            100% {
+                clip-path: circle(140px at 0% 50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>spotLight</h1>
+</body>
+</html>
